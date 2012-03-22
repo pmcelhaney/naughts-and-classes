@@ -1,0 +1,126 @@
+#board {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    font-size: 4em;
+}
+
+
+label {
+    display: block;
+    width: 25%;
+    height: 25%;
+    border: 1px solid black;
+    position: absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+input {
+    position: absolute;
+    visibility: hidden;
+}
+
+div {
+    display: none;
+    width: 24%;
+    height: 24%;
+    margin: 1px;
+    z-index: 100;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    font-family: "Comic Sans MS", "Sans-Serif";
+}
+
+input.x:checked + div {
+    display: block;
+}
+
+
+
+
+input.o:checked + div {
+    display: block;
+}
+
+
+.x1 {
+  border-left: 0
+}
+
+.x3 {
+  border-right: 0
+}
+
+.y1 {
+  border-top: 0;
+}
+
+.y3 {
+  border-bottom: 0;
+}
+
+.x1, .x1 + div {
+    left: 0;
+}
+
+.x2, .x2 + div {
+    left: 25%;
+}
+
+.x3, .x3 + div {
+    left: 50%;
+}
+
+
+.y1, .y1 + div {
+    top: 0;
+}
+
+.y2, .y2 + div {
+    top: 25%;
+}
+
+.y3, .y3 + div {
+    top: 50%;
+}
+
+
+label.x {
+ z-index: 10;
+}
+
+
+
+label.o,
+.x:checked ~ label.x {
+    z-index: 9;
+}
+
+.o:checked ~ label.o,
+.x:checked ~ .x:checked ~ label.x {
+    z-index: 8;
+}
+
+.o:checked ~ .o:checked ~ label.o,
+.x:checked ~ .x:checked ~ .x:checked ~ label.x {
+    z-index: 7;
+}
+
+.o:checked ~ .o:checked ~ .o:checked ~ label.o,
+.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x {
+    z-index: 6;
+}
+
+.o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o,
+.x:checked ~.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x {
+    z-index: 5;
+}
+
+
+
+
+​
