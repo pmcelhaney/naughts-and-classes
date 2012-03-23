@@ -42,6 +42,7 @@ input.x:checked + div {
 
 
 
+
 input.o:checked + div {
     display: block;
 }
@@ -64,28 +65,28 @@ input.o:checked + div {
 }
 
 .x1, .x1 + div {
-    left: 0;
+    left: 16%;
 }
 
 .x2, .x2 + div {
-    left: 25%;
+    left: 41%;
 }
 
 .x3, .x3 + div {
-    left: 50%;
+    left: 66%;
 }
 
 
 .y1, .y1 + div {
-    top: 0;
+    top: 16%;
 }
 
 .y2, .y2 + div {
-    top: 25%;
+    top: 41%;
 }
 
 .y3, .y3 + div {
-    top: 50%;
+    top: 66%;
 }
 
 
@@ -118,6 +119,43 @@ label.o,
 .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o,
 .x:checked ~.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x {
     z-index: 5;
+}
+
+.o.x1:checked  ~ .o.x1:checked ~ .o.x1:checked ~ .o.winner,
+.o.x2:checked  ~ .o.x2:checked ~ .o.x2:checked ~ .o.winner,
+.o.x3:checked  ~ .o.x3:checked ~ .o.x3:checked ~ .o.winner,
+.o.y1:checked  ~ .o.y1:checked ~ .o.y1:checked ~ .o.winner,
+.o.y2:checked  ~ .o.y2:checked ~ .o.y2:checked ~ .o.winner,
+.o.y3:checked  ~ .o.y3:checked ~ .o.y3:checked ~ .o.winner,
+.o.x1.y1:checked  ~ .o.x2.y2:checked ~ .o.x3.y3:checked ~ .o.winner,
+.o.x3.y1:checked  ~ .o.x2.y2:checked ~ .o.x1.y3:checked ~ .o.winner {
+    display: block;
+}
+
+.x.x1:checked  ~ .x.x1:checked ~ .x.x1:checked ~ .x.winner,
+.x.x2:checked  ~ .x.x2:checked ~ .x.x2:checked ~ .x.winner,
+.x.x3:checked  ~ .x.x3:checked ~ .x.x3:checked ~ .x.winner,
+.x.y1:checked  ~ .x.y1:checked ~ .x.y1:checked ~ .x.winner,
+.x.y2:checked  ~ .x.y2:checked ~ .x.y2:checked ~ .x.winner,
+.x.y3:checked  ~ .x.y3:checked ~ .x.y3:checked ~ .x.winner,
+.x.x1.y1:checked  ~ .x.x2.y2:checked ~ .x.x3.y3:checked ~ .x.winner,
+.x.x3.y1:checked  ~ .x.x2.y2:checked ~ .x.x1.y3:checked ~ .x.winner {
+    display: block;
+}
+
+input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~input:checked ~ input:checked ~ input:checked ~ h2.tie.winner {
+    display: block;
+}
+
+h2.winner {
+    font-family: Helvetica, Arial, Sans-Serif;
+    position: absolute;
+    top: 100%;
+    display: none;
+    font-size: 50%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
 }
 
 
