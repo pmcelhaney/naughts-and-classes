@@ -16,6 +16,7 @@ label {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    cursor: pointer;
 }
 
 input {
@@ -33,6 +34,7 @@ div {
     background-color: white;
     text-align: center;
     font-family: "Comic Sans MS", "Sans-Serif";
+    cursor: default;
 }
 
 input.x:checked + div {
