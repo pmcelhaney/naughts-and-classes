@@ -97,34 +97,56 @@ input.o:checked + div {
 }
 
 
-label.x {
+label.if-o-goes-first {
+    display: none;
+}
+
+#o-first:target label.if-o-goes-first {
+    display: block;
+}
+
+
+label.x,
+#o-first:target label.o
+{
  z-index: 10;
 }
 
 
 
 label.o,
-.x:checked ~ label.x {
+.x:checked ~ label.x,
+#o-first:target label.x,
+#o-first:target .o:checked ~ label.o
+{
     z-index: 9;
 }
 
 .o:checked ~ label.o,
-.x:checked ~ .x:checked ~ label.x {
+.x:checked ~ .x:checked ~ label.x,
+#o-first:target .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ label.o {
     z-index: 8;
 }
 
 .o:checked ~ .o:checked ~ label.o,
-.x:checked ~ .x:checked ~ .x:checked ~ label.x {
+.x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ label.o {
     z-index: 7;
 }
 
 .o:checked ~ .o:checked ~ .o:checked ~ label.o,
-.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x {
+.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o {
     z-index: 6;
 }
 
 .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o,
-.x:checked ~.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x {
+.x:checked ~.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o {
     z-index: 5;
 }
 
@@ -173,6 +195,10 @@ h2.winner {
     display: none;
 }
 
+#o-first:target .play-again.if-o-goes-first {
+    z-index: 2;
+}
+
 .fork-me-on-github {
     right: 0;
 }
@@ -207,5 +233,6 @@ h2.winner {
     margin-top: 1px;
 }
 
+ 
 
 ​
