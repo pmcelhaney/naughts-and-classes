@@ -49,9 +49,12 @@
 <label class="o x2 y3" for="o23"></label>
 <label class="o x3 y3" for="o33"></label>
 
-<h2 class="tie winner">It's a draw.</h2>
-<h2 class="o winner">O Wins!</h2>
-<h2 class="x winner">X Wins!</h2>
+<h2 class="winner if-board-is-full">It's a draw.</h2>
+<h2 class="winner if-o-wins">O Wins!</h2>
+<h2 class="winner if-x-wins">X Wins!</h2>
+
+<a href="?#o-goes-first" class="play-again button if-x-wins if-o-wins if-board-is-full">O's turn</a>
+<a href="" class="fork-me-on-github button if-x-wins if-o-wins if-board-is-full">Fork me on Github</a>
 
 </article>
 
