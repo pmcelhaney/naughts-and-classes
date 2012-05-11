@@ -1,4 +1,4 @@
-# Naughts and Classes
+# Naughts & Classes
 
 Tic-tac-toe.
 
