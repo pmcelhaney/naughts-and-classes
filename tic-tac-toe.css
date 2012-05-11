@@ -32,12 +32,13 @@ div {
     display: none;
     width: 32%;
     height: 32%;
+    line-height: 1.5em;
     margin: 1px;
     z-index: 100;
     position: absolute;
     background-color: white;
     text-align: center;
-    font-family: "Comic Sans MS", "Sans-Serif";
+    font-family: "Comic Sans MS", Helvetica, Arial, "Sans-Serif";
     cursor: default;
     font-size: 5em;
 }
@@ -251,7 +252,5 @@ h2.winner {
 .button:active {
     margin-top: 1px;
 }
-
- 
 
 ​
