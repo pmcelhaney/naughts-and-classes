@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#board {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin-bottom: 400px;
+}
+
+
+label {
+    display: block;
+    width: 25%;
+    height: 25%;
+    border: 1px solid black;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+input {
+    position: absolute;
+    visibility: hidden;
+}
+
+div {
+    display: none;
+    width: 24%;
+    height: 24%;
+    line-height: 1.5em;
+    margin: 1px;
+    z-index: 100;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    font-family: "Comic Sans MS", Helvetica, Arial, "Sans-Serif";
+    cursor: default;
+    font-size: 4em;
+}
+
+input.x:checked + div {
+    display: block;
+}
+
+
+
+
+
+input.o:checked + div {
+    display: block;
+}
+
+
+.x1 {
+  border-left: 0
+}
+
+.x4 {
+  border-right: 0
+}
+
+.y1 {
+  border-top: 0;
+}
+
+.y4 {
+  border-bottom: 0;
+}
+
+.x1, .x1 + div {
+    left: 0%;
+}
+
+.x2, .x2 + div {
+    left: 25%;
+}
+
+.x3, .x3 + div {
+    left: 50%;
+}
+
+.x4, .x4 + div {
+    left: 75%;
+}
+
+
+
+.y1, .y1 + div {
+    top: 0%;
+}
+
+.y2, .y2 + div {
+    top: 25%;
+}
+
+.y3, .y3 + div {
+    top: 50%;
+}
+
+.y4, .y4 + div {
+    top: 75%;
+}
+
+
+label.if-o-goes-first {
+    display: none;
+}
+
+#o-first:target label.if-o-goes-first {
+    display: block;
+}
+
+
+label.x,
+#o-first:target label.o
+{
+ z-index: 65;
+}
+
+label.o,
+#o-first:target label.x
+{
+    z-index: 64;
+}
+
+.x:checked ~ label.x,
+#o-first:target .o:checked ~ label.o
+{
+    z-index: 63;
+}
+
+.o:checked ~ label.o,
+#o-first:target .x:checked ~ label.x
+{
+    z-index: 62;
+}
+
+.x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ label.o
+{
+    z-index: 61;
+}
+
+.o:checked ~ .o:checked ~ label.o,
+#o-first:target .x:checked ~ .x:checked ~ label.x
+{
+    z-index: 60;
+}
+
+.x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ label.o
+{
+    z-index: 59;
+}
+
+
+.o:checked ~ .o:checked ~ .o:checked ~ label.o,
+#o-first:target .x:checked ~ .x:checked ~ .x:checked ~ label.x
+{
+    z-index: 58;
+}
+
+.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o
+{
+    z-index: 57;
+}
+
+
+.o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o,
+#o-first:target .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x
+{
+    z-index: 56;
+}
+
+.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o
+{
+    z-index: 55;
+}
+
+
+.o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o,
+#o-first:target .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x
+{
+    z-index: 54;
+}
+
+
+
+
+
+
+
+.o.x1:checked  ~ .o.x1:checked ~ .o.x1:checked ~ .o.x1:checked ~ .if-o-wins,
+.o.x2:checked  ~ .o.x2:checked ~ .o.x2:checked ~ .o.x2:checked ~ .if-o-wins,
+.o.x3:checked  ~ .o.x3:checked ~ .o.x3:checked ~ .o.x3:checked ~ .if-o-wins,
+.o.y1:checked  ~ .o.y1:checked ~ .o.y1:checked ~ .o.y1:checked ~ .if-o-wins,
+.o.y2:checked  ~ .o.y2:checked ~ .o.y2:checked ~ .o.y2:checked ~ .if-o-wins,
+.o.y3:checked  ~ .o.y3:checked ~ .o.y3:checked ~ .o.y3:checked ~ .if-o-wins,
+.o.x1.y1:checked  ~ .o.x2.y2:checked ~ .o.x3.y3:checked ~ .o.x4.y4:checked ~ .if-o-wins,
+.o.x4.y1:checked  ~ .o.x3.y2:checked ~ .o.x2.y3:checked ~ .o.x1.y4:checked ~ .if-o-wins  {
+    display: block;
+}
+
+.x.x1:checked  ~ .x.x1:checked ~ .x.x1:checked ~ .x.x1:checked ~ .if-x-wins ,
+.x.x2:checked  ~ .x.x2:checked ~ .x.x2:checked ~ .x.x2:checked ~ .if-x-wins ,
+.x.x3:checked  ~ .x.x3:checked ~ .x.x3:checked ~ .x.x3:checked ~ .if-x-wins ,
+.x.y1:checked  ~ .x.y1:checked ~ .x.y1:checked ~ .x.y1:checked ~ .if-x-wins ,
+.x.y2:checked  ~ .x.y2:checked ~ .x.y2:checked ~ .x.y2:checked ~ .if-x-wins ,
+.x.y3:checked  ~ .x.y3:checked ~ .x.y3:checked ~ .x.y3:checked ~ .if-x-wins ,
+.x.x1.y1:checked  ~ .x.x2.y2:checked ~ .x.x3.y3:checked ~ .x.x4.y4:checked ~ .if-x-wins ,
+.x.x4.y1:checked  ~ .x.x3.y2:checked ~ .x.x2.y3:checked ~ .x.x1.y4:checked ~ .if-x-wins {
+    display: block;
+}
+
+input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~input:checked ~ input:checked
+input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~input:checked ~ .if-board-is-full {
+    display: block;
+}
+
+h2.winner {
+    font-family: Helvetica, Arial, Sans-Serif;
+    position: absolute;
+    top: 100%;
+    display: none;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.play-again, .fork-me-on-github {
+    font-family: arial, Helvetica, Sans-Serif;
+    width: 45%;
+    position: absolute;
+    top: 125%;
+    text-decoration: none;
+    display: none;
+}
+
+#o-first:target .play-again.if-o-goes-first {
+    z-index: 2;
+}
+
+.fork-me-on-github {
+    right: 0;
+}
+
+
+/* Buttons styles from http://webdesignerwall.com/tutorials/css3-gradient-buttons */
+
+.button {
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    color: #e9e9e9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#575757), to(#888));
+    background: -moz-linear-gradient(top,  #fff,  #ededed);
+
+}
+.button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#757575), to(#4b4b4b));
+    background: -moz-linear-gradient(top,  #757575,  #4b4b4b);
+}
+.button:active {
+    margin-top: 1px;
+}
+
+​

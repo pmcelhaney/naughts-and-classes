@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8" />
+<title>Naughts &amp; Classes (4&times;4&times;4)</title>
+<link rel="stylesheet" type="text/css" href="tic-tac-toe.css">
+<meta name="viewport" content="width=device-width">
+</head>
+<body id="o-first">
+
+
+<form id="board">
+<input type="checkbox" class="x x1 y1" id="x11"><div>X</div>
+<input type="checkbox" class="x x2 y1" id="x21"><div>X</div>
+<input type="checkbox" class="x x3 y1" id="x31"><div>X</div>
+<input type="checkbox" class="x x4 y1" id="x41"><div>X</div>
+
+
+<input type="checkbox" class="x x1 y2" id="x12"><div>X</div>
+<input type="checkbox" class="x x2 y2" id="x22"><div>X</div>
+<input type="checkbox" class="x x3 y2" id="x32"><div>X</div>
+<input type="checkbox" class="x x4 y2" id="x42"><div>X</div>
+
+<input type="checkbox" class="x x1 y3" id="x13"><div>X</div>
+<input type="checkbox" class="x x2 y3" id="x23"><div>X</div>
+<input type="checkbox" class="x x3 y3" id="x33"><div>X</div>
+<input type="checkbox" class="x x4 y3" id="x43"><div>X</div>
+
+<input type="checkbox" class="x x1 y4" id="x14"><div>X</div>
+<input type="checkbox" class="x x2 y4" id="x24"><div>X</div>
+<input type="checkbox" class="x x3 y4" id="x34"><div>X</div>
+<input type="checkbox" class="x x4 y4" id="x44"><div>X</div>
+
+
+
+<input type="checkbox" class="o x1 y1" id="o11"><div>O</div>
+<input type="checkbox" class="o x2 y1" id="o21"><div>O</div>
+<input type="checkbox" class="o x3 y1" id="o31"><div>O</div>
+<input type="checkbox" class="o x4 y1" id="o41"><div>O</div>
+
+<input type="checkbox" class="o x1 y2" id="o12"><div>O</div>
+<input type="checkbox" class="o x2 y2" id="o22"><div>O</div>
+<input type="checkbox" class="o x3 y2" id="o32"><div>O</div>
+<input type="checkbox" class="o x4 y2" id="o42"><div>O</div>
+
+<input type="checkbox" class="o x1 y3" id="o13"><div>O</div>
+<input type="checkbox" class="o x2 y3" id="o23"><div>O</div>
+<input type="checkbox" class="o x3 y3" id="o33"><div>O</div>
+<input type="checkbox" class="o x4 y3" id="o43"><div>O</div>
+
+<input type="checkbox" class="o x1 y4" id="o14"><div>O</div>
+<input type="checkbox" class="o x2 y4" id="o24"><div>O</div>
+<input type="checkbox" class="o x3 y4" id="o34"><div>O</div>
+<input type="checkbox" class="o x4 y4" id="o44"><div>O</div>
+
+
+
+
+<label class="x x1 y1" for="x11" onclick=""></label>
+<label class="x x2 y1" for="x21" onclick=""></label>
+<label class="x x3 y1" for="x31" onclick=""></label>
+<label class="x x4 y1" for="x41" onclick=""></label>
+
+<label class="x x1 y2" for="x12" onclick=""></label>
+<label class="x x2 y2" for="x22" onclick=""></label>
+<label class="x x3 y2" for="x32" onclick=""></label>
+<label class="x x4 y2" for="x42" onclick=""></label>
+
+<label class="x x1 y3" for="x13" onclick=""></label>
+<label class="x x2 y3" for="x23" onclick=""></label>
+<label class="x x3 y3" for="x33" onclick=""></label>
+<label class="x x4 y3" for="x43" onclick=""></label>
+
+<label class="x x1 y4" for="x14" onclick=""></label>
+<label class="x x2 y4" for="x24" onclick=""></label>
+<label class="x x3 y4" for="x34" onclick=""></label>
+<label class="x x4 y4" for="x44" onclick=""></label>
+
+
+
+<label class="o x1 y1" for="o11" onclick=""></label>
+<label class="o x2 y1" for="o21" onclick=""></label>
+<label class="o x3 y1" for="o31" onclick=""></label>
+<label class="o x4 y1" for="o41" onclick=""></label>
+
+<label class="o x1 y2" for="o12" onclick=""></label>
+<label class="o x2 y2" for="o22" onclick=""></label>
+<label class="o x3 y2" for="o32" onclick=""></label>
+<label class="o x4 y2" for="o42" onclick=""></label>
+
+<label class="o x1 y3" for="o13" onclick=""></label>
+<label class="o x2 y3" for="o23" onclick=""></label>
+<label class="o x3 y3" for="o33" onclick=""></label>
+<label class="o x4 y3" for="o43" onclick=""></label>
+
+<label class="o x1 y4" for="o14" onclick=""></label>
+<label class="o x2 y4" for="o24" onclick=""></label>
+<label class="o x3 y4" for="o34" onclick=""></label>
+<label class="o x4 y4" for="o44" onclick=""></label>
+
+
+<h2 class="winner if-board-is-full">It's a draw.</h2>
+<h2 class="winner if-o-wins">O Wins!</h2>
+<h2 class="winner if-x-wins">X Wins!</h2>
+
+<a href="??" class="play-again button if-x-wins if-o-wins if-board-is-full if-o-goes-first">X's turn</a>
+<a href="?#o-first" class="play-again button if-x-wins if-o-wins if-board-is-full">O's turn</a>
+<a href="https://github.com/pmcelhaney/naughts-and-classes" class="fork-me-on-github button if-x-wins if-o-wins if-board-is-full">Fork me on Github</a>
+
+</form>
+
+</body>
+</html>
