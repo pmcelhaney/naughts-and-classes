@@ -1,0 +1,85 @@
+
+
+label.if-o-goes-first {
+    display: none;
+}
+
+#o-first:target label.if-o-goes-first {
+    display: block;
+}
+
+
+label.x,
+#o-first:target label.o
+{
+ z-index: 65;
+}
+
+label.o,
+#o-first:target label.x
+{
+    z-index: 64;
+}
+
+.x:checked ~ label.x,
+#o-first:target .o:checked ~ label.o
+{
+    z-index: 63;
+}
+
+.o:checked ~ label.o,
+#o-first:target .x:checked ~ label.x
+{
+    z-index: 62;
+}
+
+.x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ label.o
+{
+    z-index: 61;
+}
+
+.o:checked ~ .o:checked ~ label.o,
+#o-first:target .x:checked ~ .x:checked ~ label.x
+{
+    z-index: 60;
+}
+
+.x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ label.o
+{
+    z-index: 59;
+}
+
+
+.o:checked ~ .o:checked ~ .o:checked ~ label.o,
+#o-first:target .x:checked ~ .x:checked ~ .x:checked ~ label.x
+{
+    z-index: 58;
+}
+
+.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o
+{
+    z-index: 57;
+}
+
+
+.o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o,
+#o-first:target .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x
+{
+    z-index: 56;
+}
+
+.x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x,
+#o-first:target .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o
+{
+    z-index: 55;
+}
+
+
+.o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ .o:checked ~ label.o,
+#o-first:target .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ .x:checked ~ label.x
+{
+    z-index: 54;
+}
