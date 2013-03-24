@@ -67,6 +67,17 @@ for (var i = 1; i <=4; i++) {
 
 }
 
+// 3D diagonals
+winningCombinations.push('.o.x1.y1.z1:checked ~ .o.x2.y2.z2:checked ~ .o.x3.y3.z3:checked ~ .o.x4.y4.z4:checked ~ .if-o-wins');
+winningCombinations.push('.x.x1.y1.z1:checked ~ .x.x2.y2.z2:checked ~ .x.x3.y3.z3:checked ~ .x.x4.y4.z4:checked ~ .if-x-wins');
+winningCombinations.push('.o.x4.y1.z1:checked ~ .o.x3.y2.z2:checked ~ .o.x2.y3.z3:checked ~ .o.x1.y4.z4:checked ~ .if-o-wins');
+winningCombinations.push('.x.x4.y1.z1:checked ~ .x.x3.y2.z2:checked ~ .x.x2.y3.z3:checked ~ .x.x1.y4.z4:checked ~ .if-x-wins');
+winningCombinations.push('.o.x4.y4.z1:checked ~ .o.x3.y3.z2:checked ~ .o.x2.y2.z3:checked ~ .o.x1.y1.z4:checked ~ .if-o-wins');
+winningCombinations.push('.x.x4.y4.z1:checked ~ .x.x3.y3.z2:checked ~ .x.x2.y2.z3:checked ~ .x.x1.y1.z4:checked ~ .if-x-wins');
+winningCombinations.push('.o.x1.y4.z1:checked ~ .o.x2.y3.z2:checked ~ .o.x3.y2.z3:checked ~ .o.x4.y1.z4:checked ~ .if-o-wins');
+winningCombinations.push('.x.x1.y4.z1:checked ~ .x.x2.y3.z2:checked ~ .x.x3.y2.z3:checked ~ .x.x4.y1.z4:checked ~ .if-x-wins');
+
+
 fs.writeFile('turns.css', turns.join('\n'));
 
 console.log(winningCombinations.join(',\n'));
