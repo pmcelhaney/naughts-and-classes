@@ -1,9 +1,11 @@
 .o.x1:checked  ~ .o.x1:checked ~ .o.x1:checked ~ .o.x1:checked ~ .if-o-wins,
 .o.x2:checked  ~ .o.x2:checked ~ .o.x2:checked ~ .o.x2:checked ~ .if-o-wins,
 .o.x3:checked  ~ .o.x3:checked ~ .o.x3:checked ~ .o.x3:checked ~ .if-o-wins,
+.o.x4:checked  ~ .o.x4:checked ~ .o.x4:checked ~ .o.x4:checked ~ .if-o-wins,
 .o.y1:checked  ~ .o.y1:checked ~ .o.y1:checked ~ .o.y1:checked ~ .if-o-wins,
 .o.y2:checked  ~ .o.y2:checked ~ .o.y2:checked ~ .o.y2:checked ~ .if-o-wins,
 .o.y3:checked  ~ .o.y3:checked ~ .o.y3:checked ~ .o.y3:checked ~ .if-o-wins,
+.o.y4:checked  ~ .o.y4:checked ~ .o.y4:checked ~ .o.y4:checked ~ .if-o-wins,
 .o.x1.y1:checked  ~ .o.x2.y2:checked ~ .o.x3.y3:checked ~ .o.x4.y4:checked ~ .if-o-wins,
 .o.x4.y1:checked  ~ .o.x3.y2:checked ~ .o.x2.y3:checked ~ .o.x1.y4:checked ~ .if-o-wins  {
     display: block;
@@ -12,15 +14,17 @@
 .x.x1:checked  ~ .x.x1:checked ~ .x.x1:checked ~ .x.x1:checked ~ .if-x-wins ,
 .x.x2:checked  ~ .x.x2:checked ~ .x.x2:checked ~ .x.x2:checked ~ .if-x-wins ,
 .x.x3:checked  ~ .x.x3:checked ~ .x.x3:checked ~ .x.x3:checked ~ .if-x-wins ,
+.x.x4:checked  ~ .x.x4:checked ~ .x.x4:checked ~ .x.x4:checked ~ .if-x-wins ,
 .x.y1:checked  ~ .x.y1:checked ~ .x.y1:checked ~ .x.y1:checked ~ .if-x-wins ,
 .x.y2:checked  ~ .x.y2:checked ~ .x.y2:checked ~ .x.y2:checked ~ .if-x-wins ,
 .x.y3:checked  ~ .x.y3:checked ~ .x.y3:checked ~ .x.y3:checked ~ .if-x-wins ,
+.x.y4:checked  ~ .x.y4:checked ~ .x.y4:checked ~ .x.y4:checked ~ .if-x-wins ,
 .x.x1.y1:checked  ~ .x.x2.y2:checked ~ .x.x3.y3:checked ~ .x.x4.y4:checked ~ .if-x-wins ,
 .x.x4.y1:checked  ~ .x.x3.y2:checked ~ .x.x2.y3:checked ~ .x.x1.y4:checked ~ .if-x-wins {
     display: block;
 }
 
-input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~input:checked ~ input:checked
-input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~input:checked ~ .if-board-is-full {
-    display: block;
+/* This will need to change to 64 inputs when all four boards are in */
+input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ input:checked ~ .if-board-is-full {
+	display: block;
 }
