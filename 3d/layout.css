@@ -6,10 +6,10 @@
 
 #board {
     margin: auto;
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     position: relative;
-    margin-bottom: 400px;
+    margin-bottom: 200px;
 }
 
 
@@ -32,7 +32,7 @@ div {
     display: none;
     width: 24%;
     height: 24%;
-    line-height: 1.5em;
+    line-height: 48px;
     margin: 1px;
     z-index: 100;
     position: absolute;
@@ -40,7 +40,7 @@ div {
     text-align: center;
     font-family: "Comic Sans MS", Helvetica, Arial, "Sans-Serif";
     cursor: default;
-    font-size: 4em;
+    font-size: 48px;
 }
 
 input.x:checked + div {
@@ -100,4 +100,21 @@ input.o:checked + div {
 
 .y4, .y4 + div {
     top: 75%;
+}
+
+
+.z1, .z1 + div {
+    -webkit-transform: translate(-375px, 0);
+}
+
+.z2, .z2 + div {
+    -webkit-transform: translate(-125px, 0);
+}
+
+.z3, .z3 + div {
+    -webkit-transform: translate(125px, 0);
+}
+
+.z4, .z4 + div {
+    -webkit-transform: translate(375px, 0);
 }
