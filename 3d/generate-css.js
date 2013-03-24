@@ -43,6 +43,28 @@ for (var i = 1; i <=4; i++) {
 
 	}
 
+	// diagonal (xy)
+	selector =  '.z' + i + ':checked';
+	winningCombinations.push('.o.x1.y1' + selector + ' ~ ' + '.o.x2.y2' + selector + ' ~ ' + '.o.x3.y3' + selector + ' ~ ' + '.o.x4.y4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.x.x1.y1' + selector + ' ~ ' + '.x.x2.y2' + selector + ' ~ ' + '.x.x3.y3' + selector + ' ~ ' + '.x.x4.y4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.o.x4.y1' + selector + ' ~ ' + '.o.x3.y2' + selector + ' ~ ' + '.o.x2.y3' + selector + ' ~ ' + '.o.x1.y4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.x.x4.y1' + selector + ' ~ ' + '.x.x3.y2' + selector + ' ~ ' + '.x.x2.y3' + selector + ' ~ ' + '.x.x1.y4' + selector + ' ~ ' + '.if-o-wins');
+
+	// diagonal (yz)
+	selector =  '.x' + i + ':checked';
+	winningCombinations.push('.o.y1.z1' + selector + ' ~ ' + '.o.y2.z2' + selector + ' ~ ' + '.o.y3.z3' + selector + ' ~ ' + '.o.y4.z4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.x.y1.z1' + selector + ' ~ ' + '.x.y2.z2' + selector + ' ~ ' + '.x.y3.z3' + selector + ' ~ ' + '.x.y4.z4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.o.y4.z1' + selector + ' ~ ' + '.o.y3.z2' + selector + ' ~ ' + '.o.y2.z3' + selector + ' ~ ' + '.o.y1.z4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.x.y4.z1' + selector + ' ~ ' + '.x.y3.z2' + selector + ' ~ ' + '.x.y2.z3' + selector + ' ~ ' + '.x.y1.z4' + selector + ' ~ ' + '.if-o-wins');
+
+
+	// diagonal (xz)
+	selector =  '.y' + i + ':checked';
+	winningCombinations.push('.o.x1.z1' + selector + ' ~ ' + '.o.x2.z2' + selector + ' ~ ' + '.o.x3.z3' + selector + ' ~ ' + '.o.x4.z4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.x.x1.z1' + selector + ' ~ ' + '.x.x2.z2' + selector + ' ~ ' + '.x.x3.z3' + selector + ' ~ ' + '.x.x4.z4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.o.x4.z1' + selector + ' ~ ' + '.o.x3.z2' + selector + ' ~ ' + '.o.x2.z3' + selector + ' ~ ' + '.o.x1.z4' + selector + ' ~ ' + '.if-o-wins');
+	winningCombinations.push('.x.x4.z1' + selector + ' ~ ' + '.x.x3.z2' + selector + ' ~ ' + '.x.x2.z3' + selector + ' ~ ' + '.x.x1.z4' + selector + ' ~ ' + '.if-o-wins');
+
 }
 
 fs.writeFile('turns.css', turns.join('\n'));
