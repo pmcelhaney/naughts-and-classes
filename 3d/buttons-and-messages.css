@@ -11,7 +11,7 @@ h2.winner {
 
 .play-again, .fork-me-on-github {
     font-family: arial, Helvetica, Sans-Serif;
-    width: 45%;
+    width: 95%;
     position: absolute;
     top: 125%;
     text-decoration: none;
@@ -22,8 +22,12 @@ h2.winner {
     z-index: 2;
 }
 
+.play-again {
+    left: -50%;
+}
+
 .fork-me-on-github {
-    right: 0;
+    right: -50%;
 }
 
 
