@@ -6,7 +6,7 @@
 
 #board {
     margin: auto;
-    width: 200px;
+    width: 950px;
     height: 200px;
     position: relative;
     margin-bottom: 200px;
@@ -15,8 +15,8 @@
 
 label {
     display: block;
-    width: 25%;
-    height: 25%;
+    width: 50px;
+    height: 50px;
     border: 1px solid black;
     position: absolute;
     cursor: pointer;
@@ -30,8 +30,8 @@ input {
 
 div {
     display: none;
-    width: 24%;
-    height: 24%;
+    width: 96px;
+    height: 96px;
     line-height: 48px;
     margin: 1px;
     z-index: 100;
@@ -69,52 +69,52 @@ input.o:checked + div {
 }
 
 .x1, .x1 + div {
-    left: 0%;
+    left: 0;
 }
 
 .x2, .x2 + div {
-    left: 25%;
+    left: 50px;
 }
 
 .x3, .x3 + div {
-    left: 50%;
+    left: 100px;
 }
 
 .x4, .x4 + div {
-    left: 75%;
+    left: 150px;
 }
 
 
 
 .y1, .y1 + div {
-    top: 0%;
+    top: 0;
 }
 
 .y2, .y2 + div {
-    top: 25%;
+    top: 50px;
 }
 
 .y3, .y3 + div {
-    top: 50%;
+    top: 100px;
 }
 
 .y4, .y4 + div {
-    top: 75%;
+    top: 150px;
 }
 
 
 .z1, .z1 + div {
-    -webkit-transform: translate(-375px, 0);
+    -webkit-transform: translate(0, 0);
 }
 
 .z2, .z2 + div {
-    -webkit-transform: translate(-125px, 0);
+    -webkit-transform: translate(250px, 0);
 }
 
 .z3, .z3 + div {
-    -webkit-transform: translate(125px, 0);
+    -webkit-transform: translate(500px, 0);
 }
 
 .z4, .z4 + div {
-    -webkit-transform: translate(375px, 0);
+    -webkit-transform: translate(750px, 0);
 }
