@@ -2,7 +2,7 @@
 h2.winner {
     font-family: Helvetica, Arial, Sans-Serif;
     position: absolute;
-    top: 100%;
+    top: 125%;
     display: none;
     width: 100%;
     text-align: center;
@@ -11,9 +11,9 @@ h2.winner {
 
 .play-again, .fork-me-on-github {
     font-family: arial, Helvetica, Sans-Serif;
-    width: 95%;
+    width: 20%;
     position: absolute;
-    top: 125%;
+    top: 175%;
     text-decoration: none;
     display: none;
 }
@@ -23,11 +23,11 @@ h2.winner {
 }
 
 .play-again {
-    left: -50%;
+    left: 25%;
 }
 
 .fork-me-on-github {
-    right: -50%;
+    right: 25%;
 }
 
 

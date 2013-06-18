@@ -30,8 +30,8 @@ input {
 
 div {
     display: none;
-    width: 96px;
-    height: 96px;
+    width: 48px;
+    height: 48px;
     line-height: 48px;
     margin: 1px;
     z-index: 100;
@@ -40,7 +40,7 @@ div {
     text-align: center;
     font-family: "Comic Sans MS", Helvetica, Arial, "Sans-Serif";
     cursor: default;
-    font-size: 48px;
+    font-size: 32px;
 }
 
 input.x:checked + div {
